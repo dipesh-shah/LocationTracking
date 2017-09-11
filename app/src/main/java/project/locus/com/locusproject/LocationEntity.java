@@ -27,10 +27,10 @@ public class LocationEntity {
     private int uid;
 
     @ColumnInfo(name = "longitude")
-    private double lng;
+    private double longitude;
 
     @ColumnInfo(name = "latitude")
-    private double lat;
+    private double latitude;
 
     @ColumnInfo(name = "time")
     private long recordedTime;
@@ -47,19 +47,19 @@ public class LocationEntity {
     }
 
     public double getLongitude() {
-        return lat;
+        return longitude;
     }
 
     public void setLongitude(double longitude) {
-        this.lng = longitude;
+        this.longitude = longitude;
     }
 
     public double getLatitude() {
-        return lat;
+        return latitude;
     }
 
     public void setLatitude(double latitude) {
-        this.lat = latitude;
+        this.latitude = latitude;
     }
 
     public long getRecordedTime() {
@@ -92,8 +92,8 @@ public class LocationEntity {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("latitude : " + lat);
-        sb.append("\nlongitude: " + lng).append("\nprovider : " + provider).append("\nuid : " + uid);
+        sb.append("latitude : " + latitude);
+        sb.append("\nlongitude: " + longitude).append("\nprovider : " + provider).append("\nuid : " + uid);
         return sb.toString();
     }
 }
